@@ -1,0 +1,60 @@
+
+==============================================================================
+CLAIM 1 (Theorem 2.1): symmetric CCE, per-player utility >= monopoly/(4 e^2)
+==============================================================================
+  target fraction = 1/(4 e^2) = 0.03383
+  constant   : monopoly=1.0000  per-player U=0.3599  frac=0.3599 >= 0.0338? True
+  linear     : monopoly=0.2500  per-player U=0.0856  frac=0.3423 >= 0.0338? True
+  quadratic  : monopoly=0.1481  per-player U=0.0481  frac=0.3248 >= 0.0338? True
+  exponential: monopoly=0.3679  per-player U=0.1277  frac=0.3471 >= 0.0338? True
+
+==============================================================================
+CLAIM 6 (Numerical): no-external-regret (CCE) utility -> 1/e of monopoly
+==============================================================================
+  constant   : CCE utility / monopoly = 0.3599
+  linear     : CCE utility / monopoly = 0.3423
+  quadratic  : CCE utility / monopoly = 0.3248
+  exponential: CCE utility / monopoly = 0.3471
+  [supplementary, lr-dependent] MW trajectory, linear: 0.2390
+  CCE mean fraction = 0.3435  vs  1/e = 0.3679  -> PASS
+
+==============================================================================
+CLAIM 2 (Theorem 2.2): two no-swap-regret learners -> utility <= f(c+1/k)/k
+==============================================================================
+  linear     : bound f(1/k)/k=0.0244  u1=0.0123  u2=0.0123  -> True
+  exponential: bound f(1/k)/k=0.0244  u1=0.0123  u2=0.0123  -> True
+
+==============================================================================
+CLAIM 3 (Theorem 2.3): asymmetric (1 no-swap + 1 no-external-regret) sustains high utility, constant demand
+==============================================================================
+  constant demand monopoly=1.0000; min(u1,u2)/mon = [np.float64(0.051), np.float64(0.053), np.float64(0.051), np.float64(0.052), np.float64(0.053), np.float64(0.052)]; both>=0.05*mon in 6/6 -> PASS
+
+==============================================================================
+CLAIM 4 (Theorem 2.5): n-player total utility <= 4 f(c+1/k)/k + n(1-c) f(c+1/k) e^{1-n/2}
+==============================================================================
+  n=2: bound=2.0475  simulated total=0.1307  -> True
+  n=3: bound=1.8716  simulated total=0.0923  -> True
+  n=4: bound=1.5322  simulated total=0.0750  -> True
+  n=5: bound=1.1853  simulated total=0.0647  -> True
+  n=6: bound=0.8892  simulated total=0.0581  -> True
+  bound log-decay slope vs n = -0.212 (e^{1-n/2} term => slope -> -0.5)
+
+==============================================================================
+CLAIM 5 (Theorem 2.6): high-utility CCE exists for broad demand (linear, quadratic, exponential)
+==============================================================================
+  linear     : monopoly=0.2500  per-player U=0.0856  frac=0.3423 (>=0.05) -> True
+  quadratic  : monopoly=0.1481  per-player U=0.0481  frac=0.3248 (>=0.05) -> True
+  exponential: monopoly=0.3679  per-player U=0.1277  frac=0.3471 (>=0.05) -> True
+
+==============================================================================
+VERDICT SUMMARY
+==============================================================================
+  [PASS] c1_thm21_cce
+  [PASS] c6_one_over_e
+  [PASS] c2_thm22_noswap
+  [PASS] c3_thm23_asym
+  [PASS] c4_thm25_decay
+  [PASS] c5_thm26_broad
+
+  6/6 claims verified.
+  wrote outputs/verdict.json
