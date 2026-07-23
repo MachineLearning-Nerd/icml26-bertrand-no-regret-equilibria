@@ -11,8 +11,13 @@ def prices(k: int) -> np.ndarray:
     return np.arange(1, k + 1, dtype=float) / k
 
 
-def demand(name: str, x: np.ndarray) -> np.ndarray:
+def demand(name: str | np.ndarray, x: np.ndarray) -> np.ndarray:
     x = np.asarray(x, dtype=float)
+    if not isinstance(name, str):
+        values = np.asarray(name, dtype=float)
+        if values.shape != x.shape:
+            raise ValueError("Explicit demand values must match the price grid")
+        return values
     if name == "constant":
         return np.ones_like(x)
     if name == "linear":
@@ -24,7 +29,7 @@ def demand(name: str, x: np.ndarray) -> np.ndarray:
     raise KeyError(name)
 
 
-def monopoly(k: int, cost: float, name: str) -> float:
+def monopoly(k: int, cost: float, name: str | np.ndarray) -> float:
     p = prices(k)
     return float(np.max((p - cost) * demand(name, p)))
 
@@ -49,7 +54,7 @@ class LPSolution:
     status: str
 
 
-def symmetric_cce(k: int, n: int, cost: float, name: str) -> LPSolution:
+def symmetric_cce(k: int, n: int, cost: float, name: str | np.ndarray) -> LPSolution:
     p = prices(k)
     g = (p - cost) * demand(name, p)
     realized = g / n
