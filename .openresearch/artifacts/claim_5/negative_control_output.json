@@ -1,0 +1,5 @@
+{
+  "control": "replace CE by CCE",
+  "positive_high_cost_utility": true,
+  "rejected_by_theorem_2_7_checker": true
+}

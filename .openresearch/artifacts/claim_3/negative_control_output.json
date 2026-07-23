@@ -1,0 +1,5 @@
+{
+  "control": "require swap regret for both",
+  "min_ratio": 0.025,
+  "rejected_as_high_utility": true
+}

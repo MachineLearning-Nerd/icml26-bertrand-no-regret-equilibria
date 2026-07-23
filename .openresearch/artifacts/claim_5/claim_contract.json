@@ -1,0 +1,6 @@
+{
+  "anchor": "#S2.Thmtheorem6.1.1.1, #S2.Thmtheorem7.1.1.1, #A2.Thmtheorem2",
+  "claim": 5,
+  "pass_rule": "Asymmetric CCE max-min ratios stay positive and CE LP maximum for player 2 is <=1e-8 for every audited instance.",
+  "statement": "Under asymmetric costs, Theorem 2.6 gives high-utility CCEs under its stated demand conditions, while Theorem 2.7 gives exactly zero higher-cost utility in every CE when c2-c1>1/k."
+}

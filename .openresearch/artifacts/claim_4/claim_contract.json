@@ -1,0 +1,6 @@
+{
+  "anchor": "#S2.Thmtheorem5.1.1.1 and #S3",
+  "claim": 4,
+  "pass_rule": "All optimized symmetric CCEs obey the theorem bound; direct log-linear fits for n=2..10 have negative slope and R^2>=0.80.",
+  "statement": "For n>=2 and k>=5, every CCE has total utility at most 4f(c+1/k)/k+n(1-c)f(c+1/k)e^(1-n/2); best symmetric-CCE utility decays exponentially in n."
+}

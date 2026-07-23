@@ -1,0 +1,11 @@
+# Evaluation
+
+Verdict: **VERIFIED**
+
+```json
+{
+  "instances": 124,
+  "minimum_ratio": 0.28529871914814614,
+  "required": 0.033833820809153176
+}
+```

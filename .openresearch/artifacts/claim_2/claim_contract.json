@@ -1,0 +1,6 @@
+{
+  "anchor": "#S2.Thmtheorem2.1.1.1",
+  "claim": 2,
+  "pass_rule": "LP maxima over the full CE polytope satisfy the theorem bound with residual <=1e-8.",
+  "statement": "For any non-increasing demand and any correlated equilibrium in the symmetric-cost duopoly, each utility is at most f(c+1/k)/k (or zero if c=1)."
+}

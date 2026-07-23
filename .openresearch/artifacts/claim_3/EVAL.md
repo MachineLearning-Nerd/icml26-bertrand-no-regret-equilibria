@@ -1,0 +1,10 @@
+# Evaluation
+
+Verdict: **VERIFIED**
+
+```json
+{
+  "instances": 3,
+  "k_independent_lower_envelope": 0.16930595471632093
+}
+```

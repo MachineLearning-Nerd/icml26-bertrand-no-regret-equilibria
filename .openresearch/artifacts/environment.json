@@ -1,0 +1,12 @@
+{
+  "command": "uv sync --frozen && uv run --frozen python repro/src/verify_bertrand.py",
+  "cpu_count": 8,
+  "git_sha": "1c702ca03d23714df7c9fd91fd34b176aad4d36a",
+  "numpy": "2.5.1",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "python": "3.12.11",
+  "scipy": "1.18.0",
+  "seeds": [
+    260221620
+  ]
+}

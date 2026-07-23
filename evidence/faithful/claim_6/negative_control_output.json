@@ -1,0 +1,6 @@
+{
+  "control": "use legacy wrong quadratic demand (1-x)^2",
+  "maximum_source_formula_residual": 0.5,
+  "rejected": true,
+  "wrong_formula_ratio": 0.36719359549836555
+}

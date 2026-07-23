@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "title": "Repro - Revisiting the Bertrand Paradox via Equilibrium Analysis of No-regret Learners",
+  "emoji": "\ud83c\udfaf",
+  "space_id": "DineshAI/ZEP68RaUeR",
+  "paper": null,
+  "tags": [
+    "icml2026-repro",
+    "paper-ZEP68RaUeR"
+  ],
+  "updated_at": "2026-07-22T20:31:00+00:00",
+  "root": {
+    "slug": "index",
+    "title": "Repro - Revisiting the Bertrand Paradox via Equilibrium Analysis of No-regret Learners",
+    "file": "pages/index.md",
+    "children": [
+      {
+        "slug": "overview",
+        "title": "Overview",
+        "file": "pages/overview/page.md",
+        "children": []
+      },
+      {
+        "slug": "claims",
+        "title": "Claims",
+        "file": "pages/claims/page.md",
+        "children": []
+      },
+      {
+        "slug": "evidence",
+        "title": "Evidence",
+        "file": "pages/evidence/page.md",
+        "children": []
+      },
+      {
+        "slug": "verification-run",
+        "title": "Verification run",
+        "file": "pages/verification-run/page.md",
+        "children": []
+      },
+      {
+        "slug": "conclusion",
+        "title": "Conclusion",
+        "file": "pages/conclusion/page.md",
+        "children": []
+      },
+      {
+        "slug": "claim-bertrand-1e",
+        "title": "Claims \u2014 high-utility CCE & 1/e",
+        "file": "pages/claim-bertrand-1e/page.md",
+        "children": []
+      }
+    ]
+  },
+  "agent_view_tokens": 1735,
+  "revision": "1784664403295652920"
+}
