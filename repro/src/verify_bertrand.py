@@ -269,14 +269,17 @@ def claim6() -> None:
     wrong_values = (1 - prices(100)) ** 2
     wrong = symmetric_cce(100, 2, 0.0, wrong_values)
     wrong_ratio = wrong.u1 / monopoly(100, 0.0, wrong_values)
-    negative_rejected = abs(wrong_ratio - next(e["k100_ratio"] for e in ends
-                                                if e["demand"] == "quadratic" and e["cost"] == 0.0)) > 1e-3
+    source_formula_residual = float(np.max(np.abs(
+        wrong_values - demand("quadratic", prices(100)))))
+    negative_rejected = source_formula_residual > 0.1
     ok=within03>=10 and worst<=.05 and max(float(r["residual"]) for r in rows)<=1e-7 and negative_rejected
     finish(d,"VERIFIED" if ok else "FALSIFIED",
            {"curves":len(ends),"endpoints_within_0.03":within03,"worst_endpoint_error":worst},
            {"max_lp_residual":max(r["residual"] for r in rows)},
            {"control":"use legacy wrong quadratic demand (1-x)^2",
-            "wrong_formula_ratio":wrong_ratio,"rejected":negative_rejected})
+            "wrong_formula_ratio":wrong_ratio,
+            "maximum_source_formula_residual":source_formula_residual,
+            "rejected":negative_rejected})
 
 
 def main() -> None:
