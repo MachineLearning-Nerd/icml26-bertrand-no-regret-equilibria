@@ -30,7 +30,13 @@ VERDICTS: dict[str, str] = {}
 
 def dump(path: Path, value) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(value, indent=2, sort_keys=True) + "\n")
+    path.write_text(json.dumps(value, indent=2, sort_keys=True, default=_json_default) + "\n")
+
+
+def _json_default(value):
+    if isinstance(value, np.generic):
+        return value.item()
+    raise TypeError(f"Cannot serialize {type(value).__name__}")
 
 
 def table(path: Path, rows: list[dict]) -> None:
@@ -62,7 +68,7 @@ def finish(d: Path, verdict: str, summary: dict, independent: dict, negative: di
     dump(d / "negative_control_output.json", negative)
     (d / "EVAL.md").write_text(
         f"# Evaluation\n\nVerdict: **{verdict}**\n\n```json\n"
-        + json.dumps(summary, indent=2, sort_keys=True) + "\n```\n")
+        + json.dumps(summary, indent=2, sort_keys=True, default=_json_default) + "\n```\n")
     VERDICTS[d.name] = verdict
 
 
