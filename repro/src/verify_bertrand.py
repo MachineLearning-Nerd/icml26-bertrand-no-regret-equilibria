@@ -237,7 +237,14 @@ def claim6() -> None:
         for c in (0.0,0.5,0.9):
             curve = []
             for k in range(10,101):
-                s=symmetric_cce(k,2,c,name); ratio=s.u1/monopoly(k,c,name)
+                s = symmetric_cce(k, 2, c, name)
+                denom = monopoly(k, c, name)
+                if denom <= 1e-15:
+                    rows.append({"demand": name, "cost": c, "k": k, "ratio": "NA",
+                                 "target": target, "abs_error": "NA",
+                                 "residual": s.max_violation})
+                    continue
+                ratio = s.u1 / denom
                 rows.append({"demand":name,"cost":c,"k":k,"ratio":ratio,
                              "target":target,"abs_error":abs(ratio-target),"residual":s.max_violation})
                 curve.append(ratio)
