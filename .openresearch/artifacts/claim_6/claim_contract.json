@@ -1,0 +1,6 @@
+{
+  "anchor": "#S3.SS1",
+  "claim": 6,
+  "pass_rule": "Reproduce all 12 paper curves; at k=100 every endpoint is within 0.05 of 1/e and at least 10 are within 0.03.",
+  "statement": "Section 3.1 reports that the maximum player utility over symmetric CCEs, normalized by monopoly utility, approaches roughly 1/e as k=10..100 grows across standard demands and costs."
+}

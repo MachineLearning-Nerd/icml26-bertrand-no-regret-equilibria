@@ -1,0 +1,6 @@
+{
+  "anchor": "#S2.Thmtheorem3.1.1.1",
+  "claim": 3,
+  "pass_rule": "Exact mixed-Phi LP max-min ratio remains positive across increasing k and all residuals <=1e-8.",
+  "statement": "For constant demand and c<1 with 1-c constant in k, there exists a Phi-equilibrium where player 1 has swap constraints, player 2 external constraints, and both obtain a k-independent positive fraction of monopoly utility."
+}

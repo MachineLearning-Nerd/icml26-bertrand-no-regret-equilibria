@@ -1,0 +1,14 @@
+# Bertrand claim suite
+
+{
+  "overall": "VERIFIED",
+  "claims": {
+    "claim_1": "VERIFIED",
+    "claim_2": "VERIFIED",
+    "claim_3": "VERIFIED",
+    "claim_4": "VERIFIED",
+    "claim_5": "VERIFIED",
+    "claim_6": "VERIFIED"
+  },
+  "runtime_seconds": 13.388382911682129
+}

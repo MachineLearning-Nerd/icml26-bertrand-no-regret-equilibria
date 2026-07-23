@@ -1,0 +1,6 @@
+{
+  "anchor": "#S2.Thmtheorem1.1.1.1",
+  "claim": 1,
+  "pass_rule": "Every canonical and deterministic monotone stress instance has LP-certified ratio >= 1/(4e^2) and residual <=1e-8.",
+  "statement": "For every non-increasing f:P->[0,1] in the symmetric-cost duopoly, there exists a CCE giving each player at least monopoly/(4e^2)."
+}
