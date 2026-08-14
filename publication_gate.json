@@ -1,0 +1,66 @@
+{
+  "schema_version": 2,
+  "paper_identifier": "ZEP68RaUeR",
+  "paper_title": "Revisiting the Bertrand Paradox via Equilibrium Analysis of No-regret Learners",
+  "authors": [
+    "Arnab Maiti",
+    "Junyan Liu",
+    "Kevin Jamieson",
+    "Lillian J. Ratliff"
+  ],
+  "venue": "ICML 2026",
+  "arxiv": "2602.21620v2",
+  "audited_source_sha256": "d8e4337c5c5910bf799d4b9ade203730b006dcdd9d77f32d8e0f3fc5732319a2",
+  "source_audit_html_sha256": "6afd8846b3c183ec8ab86d7f8aa3ca0207b9ab3e8ffda0751b648d6f10a1a856",
+  "evidence_release_gate": "PASSED",
+  "overall_status": "VERIFIED_SCOPED",
+  "strict_paper_claim_gate": "NOT_READY",
+  "claims_verified": 6,
+  "claims_blocked": 0,
+  "claims_falsified": 0,
+  "claims_total": 6,
+  "claims": {
+    "C1": "VERIFIED_SCOPED_FINITE_LP",
+    "C2": "VERIFIED_SCOPED_FINITE_LP",
+    "C3": "VERIFIED_SCOPED_FINITE_LP",
+    "C4": "VERIFIED_SCOPED_FINITE_NUMERICAL",
+    "C5": "VERIFIED_SCOPED_CONDITIONAL_NUMERICAL",
+    "C6": "VERIFIED_SCOPED_NUMERICAL"
+  },
+  "recorded_release": {
+    "source": "evidence/faithful/summary.json",
+    "runtime_seconds": 13.388382911682129,
+    "command": "uv sync --frozen && uv run --frozen python repro/src/verify_bertrand.py",
+    "published_space_revision": "9aac9487ad799104d583ba1d63c8184b9ad7085e",
+    "judged_space_revision": "48d0b6f9269cadf6ae6894187ee0b4e2c34be70c",
+    "candidate_validation": "release/old-new-subset-check.txt"
+  },
+  "publication": {
+    "status": "AWAITING_JUDGE_REEVALUATION",
+    "live_judge_score": "4/12",
+    "score_increase_claimed": false,
+    "published_space": "DineshAI/ZEP68RaUeR",
+    "published_space_revision": "9aac9487ad799104d583ba1d63c8184b9ad7085e"
+  },
+  "repository": {
+    "owner": "MachineLearning-Nerd",
+    "original_name": "icml26-repro-ZEP68RaUeR-bertrand-no-regret",
+    "target_name": "icml26-bertrand-no-regret-equilibria",
+    "default_branch": "main"
+  },
+  "branch_policy": {
+    "expected_public_branch_count": 4,
+    "final_branches": [
+      "main",
+      "baseline/judged-numpy-proxy",
+      "research/faithful-lp-claim-suite",
+      "release/durable-evidence"
+    ],
+    "legacy_refs_absent": [
+      "master",
+      "orx/*"
+    ],
+    "cleanup_status": "PENDING",
+    "remote_legacy_refs_absent": false
+  }
+}

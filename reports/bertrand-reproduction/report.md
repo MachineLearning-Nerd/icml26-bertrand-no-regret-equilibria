@@ -10,7 +10,7 @@ deviation constraints and restores competitive outcomes. We reconstructed those
 constraints as explicit linear programs and audited all six claims against the
 paper's actual formulas.
 
-The cumulative local-CPU verifier returns `VERIFIED` for all six finite claim
+The cumulative local-CPU verifier returns `VERIFIED_SCOPED` for all six finite claim
 contracts. This is a result of this reproduction, not a forecast of an external
 judge score. Universal mathematical quantifiers remain supported by the paper's
 proofs; finite LP certificates cannot replace those proofs.
@@ -18,7 +18,7 @@ proofs; finite LP certificates cannot replace those proofs.
 ## The strongest evidence
 
 The most consequential missing check in the judged 4/12 logbook was asymmetric
-costs. At grid resolution \(k=40\), we set the low-cost firm to \(c_1=0\), swept
+costs. At grid resolution \(k=30\), we set the low-cost firm to \(c_1=0\), swept
 \(c_2\in\{0.2,0.4,0.6\}\), and used all four source demand functions. The best
 high-utility coarse correlated equilibria (CCE, the external-regret limit set)
 give the high-cost firm at least **0.3140 of monopoly utility**. Under the full
@@ -58,12 +58,12 @@ The audits anchor Theorems 2.1, 2.2, 2.3, 2.5, 2.6, 2.7 and Section 3.1.
 
 | Claim | Paper quantity | Observed quantity | Local verdict |
 |---|---|---|---|
-| 1 | each firm's CCE utility is at least \(1/(4e^2)=0.0338338\) of monopoly | minimum **0.285299** over 124 canonical and seeded monotone-demand instances | VERIFIED |
-| 2 | every CE utility is at most \(f(c+1/k)/k\) | maximum bound excess **0** over 24 player-specific LP maxima | VERIFIED |
-| 3 | mixed swap/external constraints permit a \(k\)-independent positive fraction | lower envelope **0.169306** for \(k=20,40,60\) | VERIFIED |
-| 4 | total CCE utility obeys the exponential-in-\(n\) bound | maximum bound excess **−0.004348**; all 12 fitted slopes negative, worst \(R^2=0.8283\) | VERIFIED |
-| 5 | asymmetric-cost CCE can be high utility; higher-cost CE utility is zero | minimum CCE fraction **0.314040**; maximum higher-cost CE utility **0** | VERIFIED |
-| 6 | best symmetric-CCE utility approaches \(1/e=0.367879\) | **12/12** \(k=100\) endpoints within 0.03; worst error **0.022891** | VERIFIED |
+| 1 | each firm's CCE utility is at least \(1/(4e^2)=0.0338338\) of monopoly | minimum **0.285299** over 124 canonical and seeded monotone-demand instances | VERIFIED_SCOPED |
+| 2 | every CE utility is at most \(f(c+1/k)/k\) | maximum bound excess **0** over 24 player-specific LP maxima | VERIFIED_SCOPED |
+| 3 | mixed swap/external constraints permit a \(k\)-independent positive fraction | lower envelope **0.169306** for \(k=20,40,60\) | VERIFIED_SCOPED |
+| 4 | total CCE utility obeys the exponential-in-\(n\) bound | maximum bound excess **−0.004348**; all 12 fitted slopes negative, worst \(R^2=0.8283\) | VERIFIED_SCOPED |
+| 5 | asymmetric-cost CCE can be high utility; higher-cost CE utility is zero | minimum CCE fraction **0.314040**; maximum higher-cost CE utility **0** | VERIFIED_SCOPED |
+| 6 | best symmetric-CCE utility approaches \(1/e=0.367879\) | **12/12** \(k=100\) endpoints within 0.03; worst error **0.022891** | VERIFIED_SCOPED |
 
 These are explicit computational contracts. Claim 1's 100 seeded random
 non-increasing demands stress the universal construction but do not prove a
@@ -146,6 +146,6 @@ while the published Space revision
 awaits reevaluation.
 
 Important lineage:
-[frozen baseline](https://github.com/MachineLearning-Nerd/icml26-repro-ZEP68RaUeR-bertrand-no-regret/tree/orx/baseline-judged-numpy-proxy),
-[faithful LP suite](https://github.com/MachineLearning-Nerd/icml26-repro-ZEP68RaUeR-bertrand-no-regret/tree/orx/faithful-lp-claim-suite), and
-[durable release candidate](https://github.com/MachineLearning-Nerd/icml26-repro-ZEP68RaUeR-bertrand-no-regret/tree/orx/durable-evidence-release-candidate).
+[frozen baseline](https://github.com/MachineLearning-Nerd/icml26-bertrand-no-regret-equilibria/tree/baseline/judged-numpy-proxy),
+[faithful LP suite](https://github.com/MachineLearning-Nerd/icml26-bertrand-no-regret-equilibria/tree/research/faithful-lp-claim-suite), and
+[durable release candidate](https://github.com/MachineLearning-Nerd/icml26-bertrand-no-regret-equilibria/tree/release/durable-evidence).

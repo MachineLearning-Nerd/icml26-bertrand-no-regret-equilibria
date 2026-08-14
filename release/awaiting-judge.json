@@ -3,6 +3,7 @@
   "current_live_score": "4/12",
   "judged_space_revision": "48d0b6f9269cadf6ae6894187ee0b4e2c34be70c",
   "published_space_revision": "9aac9487ad799104d583ba1d63c8184b9ad7085e",
-  "winning_experiment_branch": "orx/durable-evidence-release-candidate",
+  "winning_experiment_branch": "release/durable-evidence",
+  "legacy_experiment_branch": "orx/durable-evidence-release-candidate",
   "winning_experiment_sha": "3931ca85eb7fe7f3a9b405e297eba1d57e3e799e"
 }
